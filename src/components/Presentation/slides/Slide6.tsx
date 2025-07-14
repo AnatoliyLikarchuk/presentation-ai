@@ -42,7 +42,6 @@ const Slide6: React.FC = () => {
         </div>
       </div>
       
-      <p>Вывод: AI дает <span className="highlight">быстрый старт</span>, но человек выигрывает в <span className="highlight">долгосрочной перспективе</span></p>
     </>
   );
 };
