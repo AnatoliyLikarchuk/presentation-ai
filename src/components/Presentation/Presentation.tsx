@@ -29,6 +29,22 @@ const Presentation: React.FC = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const nextSlide = () => {
+    if (currentSlide < slides.length - 1) {
+      const newSlide = currentSlide + 1;
+      setCurrentSlide(newSlide);
+      navigate(`/slide/${newSlide + 1}`);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentSlide > 0) {
+      const newSlide = currentSlide - 1;
+      setCurrentSlide(newSlide);
+      navigate(`/slide/${newSlide + 1}`);
+    }
+  };
+
   useEffect(() => {
     if (slideNumber) {
       const slideNum = parseInt(slideNumber, 10) - 1;
@@ -51,23 +67,7 @@ const Presentation: React.FC = () => {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [currentSlide]);
-
-  const nextSlide = () => {
-    if (currentSlide < slides.length - 1) {
-      const newSlide = currentSlide + 1;
-      setCurrentSlide(newSlide);
-      navigate(`/slide/${newSlide + 1}`);
-    }
-  };
-
-  const prevSlide = () => {
-    if (currentSlide > 0) {
-      const newSlide = currentSlide - 1;
-      setCurrentSlide(newSlide);
-      navigate(`/slide/${newSlide + 1}`);
-    }
-  };
+  }, [currentSlide, nextSlide, prevSlide]);
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
