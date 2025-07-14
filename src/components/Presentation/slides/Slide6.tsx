@@ -19,22 +19,22 @@ const Slide6: React.FC = () => {
         onLoad={() => console.log('Изображение time_work_productivity.png загружено')}
       />
       
-      <div className="comparison-table">
-        <div className="comparison-item">
+      <div className="experiment-table">
+        <div className="experiment-item">
           <h4>Первые дни</h4>
           <p>🚀 AI опережал людей</p>
           <p>⚡ Быстрые результаты</p>
           <p>🎯 Стандартные решения</p>
         </div>
         
-        <div className="comparison-item">
+        <div className="experiment-item">
           <h4>Через время</h4>
           <p>📈 Люди догнали AI</p>
           <p>🎨 Творческие решения</p>
           <p>🔄 Адаптация к изменениям</p>
         </div>
         
-        <div className="comparison-item">
+        <div className="experiment-item">
           <h4>Итог</h4>
           <p>🏆 Люди превзошли AI</p>
           <p>🧠 Глубокое понимание</p>
