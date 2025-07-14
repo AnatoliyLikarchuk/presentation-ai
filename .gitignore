@@ -105,3 +105,6 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# Documentation folder
+doc/
