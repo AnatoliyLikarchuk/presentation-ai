@@ -49,6 +49,63 @@
   font-weight: 700;
 }
 
+.slide-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+}
+
+.big-question {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.question-divider {
+  margin: 2rem 0;
+}
+
+.highlight-symbol {
+  font-size: 3rem;
+  color: #3b82f6;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.sub-question {
+  font-size: 1.8rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.motivation-text {
+  margin-top: 2rem;
+}
+
+.motivation-text p {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .slide h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;

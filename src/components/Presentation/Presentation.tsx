@@ -7,8 +7,6 @@ import Slide4 from './slides/Slide4';
 import Slide5 from './slides/Slide5';
 import Slide6 from './slides/Slide6';
 import Slide7 from './slides/Slide7';
-import Slide8 from './slides/Slide8';
-import Slide9 from './slides/Slide9';
 import Slide10 from './slides/Slide10';
 
 const slides = [
@@ -18,9 +16,7 @@ const slides = [
   { component: Slide4, title: "Предсказание токенов" },
   { component: Slide5, title: "AI как технология" },
   { component: Slide6, title: "Эксперимент с производительностью" },
-  { component: Slide7, title: "Практические примеры" },
-  { component: Slide8, title: "NotebookLM" },
-  { component: Slide9, title: "YouTube перевод" },
+  { component: Slide7, title: "Применение технологии" },
   { component: Slide10, title: "Вопросы и ответы" }
 ];
 
