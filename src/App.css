@@ -106,50 +106,45 @@
   gap: 1rem;
 }
 
-.key-takeaways-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
-  max-width: 750px;
-  margin: 1.5rem 0;
+.modern-list {
+  max-width: 700px;
+  margin: 2rem 0;
 }
 
-.takeaway-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 16px;
-  padding: 1.2rem;
-  text-align: center;
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(59, 130, 246, 0.1);
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-.takeaway-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.12);
-  border-color: rgba(59, 130, 246, 0.4);
+.list-item:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateX(10px);
 }
 
-.takeaway-icon {
-  font-size: 2.2rem;
-  margin-bottom: 0.6rem;
-  display: block;
+.list-emoji {
+  font-size: 2rem;
+  margin-right: 1.2rem;
+  min-width: 3rem;
+  text-align: center;
 }
 
-.takeaway-card h3 {
-  font-size: 1.1rem;
+.list-text {
+  font-size: 1.4rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.list-text strong {
   color: #1e40af;
-  margin-bottom: 0.5rem;
   font-weight: 600;
-}
-
-.takeaway-card p {
-  font-size: 0.9rem;
-  color: #64748b;
-  line-height: 1.4;
-  margin: 0;
-  max-width: none;
 }
 
 .slide h2 {

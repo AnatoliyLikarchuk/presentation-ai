@@ -5,29 +5,25 @@ const Slide10: React.FC = () => {
     <>
       <h2>Ключевые выводы</h2>
       
-      <div className="key-takeaways-grid">
-        <div className="takeaway-card">
-          <div className="takeaway-icon">🤖</div>
-          <h3>Технология предсказания</h3>
-          <p>AI - это не замена человека, а мощный инструмент прогнозирования</p>
+      <div className="modern-list">
+        <div className="list-item">
+          <span className="list-emoji">🤖</span>
+          <span className="list-text">AI - это <strong>технология предсказания</strong>, не замена человека</span>
         </div>
         
-        <div className="takeaway-card">
-          <div className="takeaway-icon">🤝</div>
-          <h3>Партнерство с людьми</h3>
-          <p>Лучший результат достигается в сотрудничестве с человеком</p>
+        <div className="list-item">
+          <span className="list-emoji">🤝</span>
+          <span className="list-text">Лучше всего работает в <strong>партнерстве с людьми</strong></span>
         </div>
         
-        <div className="takeaway-card">
-          <div className="takeaway-icon">⚡</div>
-          <h3>Быстрый старт</h3>
-          <p>AI дает преимущество в начале, человек побеждает в долгосрочной</p>
+        <div className="list-item">
+          <span className="list-emoji">⚡</span>
+          <span className="list-text">Дает <strong>быстрый старт</strong>, но человек выигрывает долгосрочно</span>
         </div>
         
-        <div className="takeaway-card">
-          <div className="takeaway-icon">🛠️</div>
-          <h3>Готовые инструменты</h3>
-          <p>Полезные AI-решения уже доступны для использования сегодня</p>
+        <div className="list-item">
+          <span className="list-emoji">🛠️</span>
+          <span className="list-text">Уже сейчас есть <strong>полезные инструменты</strong> для работы</span>
         </div>
       </div>
       
