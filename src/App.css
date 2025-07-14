@@ -109,45 +109,45 @@
 .key-takeaways-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 900px;
-  margin: 2rem 0;
+  gap: 1.2rem;
+  max-width: 750px;
+  margin: 1.5rem 0;
 }
 
 .takeaway-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
   backdrop-filter: blur(10px);
   border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 16px;
+  padding: 1.2rem;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .takeaway-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.12);
   border-color: rgba(59, 130, 246, 0.4);
 }
 
 .takeaway-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
   display: block;
 }
 
 .takeaway-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #1e40af;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .takeaway-card p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #64748b;
-  line-height: 1.5;
+  line-height: 1.4;
   margin: 0;
   max-width: none;
 }
