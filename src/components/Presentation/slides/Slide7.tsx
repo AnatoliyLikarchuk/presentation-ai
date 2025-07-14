@@ -5,7 +5,6 @@ const Slide7: React.FC = () => {
     <>
       <h2>Практические примеры использования AI</h2>
       
-      <p>Два крутых инструмента... и это не ChatGPT! <span className="emoji">😉</span></p>
       
       <div className="tools-grid">
         <div className="tool-card">

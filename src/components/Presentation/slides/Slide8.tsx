@@ -10,7 +10,7 @@ const Slide8: React.FC = () => {
           <span className="highlight-symbol">⚡</span>
         </div>
         
-        <h3 className="sub-question">Если это не интеллект, то как же все это использовать?</h3>
+        <h3 className="sub-question">Два крутых инструмента... и это не ChatGPT! <span className="emoji">😉</span></h3>
       </div>
     </>
   );
