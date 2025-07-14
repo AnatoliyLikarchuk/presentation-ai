@@ -17,8 +17,8 @@ const slides = [
   { component: Slide4, title: "Предсказание токенов" },
   { component: Slide5, title: "AI как технология" },
   { component: Slide6, title: "Эксперимент с производительностью" },
-  { component: Slide7, title: "Практические примеры" },
   { component: Slide8, title: "Применение технологии" },
+  { component: Slide7, title: "Практические примеры" },
   { component: Slide10, title: "Вопросы и ответы" }
 ];
 
