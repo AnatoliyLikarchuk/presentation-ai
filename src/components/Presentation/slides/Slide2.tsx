@@ -5,8 +5,8 @@ const Slide2: React.FC = () => {
     <>
       <h2>AI, AGI и ASI - что это такое?</h2>
       
-      <div className="comparison-table">
-        <div className="comparison-item">
+      <div className="ai-concepts-table">
+        <div className="ai-concept-item">
           <h4>AI (ANI)</h4>
           <p><strong>Artificial Narrow Intelligence</strong></p>
           <p>Узкоспециализированные системы</p>
@@ -14,7 +14,7 @@ const Slide2: React.FC = () => {
           <p>Например: распознавание речи, рекомендации</p>
         </div>
         
-        <div className="comparison-item">
+        <div className="ai-concept-item">
           <h4>AGI</h4>
           <p><strong>Artificial General Intelligence</strong></p>
           <p>Общий интеллект как у человека</p>
@@ -22,7 +22,7 @@ const Slide2: React.FC = () => {
           <p>Пока не существует</p>
         </div>
         
-        <div className="comparison-item">
+        <div className="ai-concept-item">
           <h4>ASI</h4>
           <p><strong>Artificial Super Intelligence</strong></p>
           <p>Превосходит человеческий интеллект</p>

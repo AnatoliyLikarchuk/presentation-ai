@@ -237,6 +237,57 @@
   word-wrap: break-word;
 }
 
+/* Специальные стили для слайда AI/AGI/ASI */
+.ai-concepts-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.ai-concept-item {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.ai-concept-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.ai-concept-item h4 {
+  color: #1e40af;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.ai-concept-item p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+  color: #475569;
+  word-wrap: break-word;
+}
+
+.ai-concept-item p:last-child {
+  margin-bottom: 0;
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
   .comparison-table {
@@ -256,6 +307,16 @@
   
   .comparison-item p {
     font-size: 1.1rem;
+  }
+  
+  .ai-concepts-table {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .ai-concept-item {
+    min-height: 180px;
+    padding: 1.2rem;
   }
 }
 
