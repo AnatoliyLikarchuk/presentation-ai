@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Slide4: React.FC = () => {
+interface Slide4Props {
+  currentStep?: number;
+}
+
+const Slide4: React.FC<Slide4Props> = ({ currentStep }) => {
   return (
     <>
       <h2>Как работает предсказание следующего токена</h2>

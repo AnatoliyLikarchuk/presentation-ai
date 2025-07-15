@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Slide1: React.FC = () => {
+interface Slide1Props {
+  currentStep?: number;
+}
+
+const Slide1: React.FC<Slide1Props> = ({ currentStep }) => {
   return (
     <>
       <h1>Что такое AI и отнимет ли он у нас работу?</h1>

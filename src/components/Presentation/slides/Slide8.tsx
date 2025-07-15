@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Slide8: React.FC = () => {
+interface Slide8Props {
+  currentStep?: number;
+}
+
+const Slide8: React.FC<Slide8Props> = ({ currentStep }) => {
   return (
     <>
       <div className="slide-content-center">

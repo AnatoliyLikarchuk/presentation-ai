@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Slide1 from './slides/Slide1';
 import Slide2 from './slides/Slide2';
@@ -9,6 +9,7 @@ import Slide6 from './slides/Slide6';
 import Slide7 from './slides/Slide7';
 import Slide8 from './slides/Slide8';
 import Slide10 from './slides/Slide10';
+import { getTotalSteps } from './slideConfig';
 
 const slides = [
   { component: Slide1, title: "Титульный слайд" },
@@ -26,28 +27,43 @@ const Presentation: React.FC = () => {
   const { slideNumber } = useParams<{ slideNumber: string }>();
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentStep, setCurrentStep] = useState(0);
 
-  const nextSlide = () => {
-    if (currentSlide < slides.length - 1) {
+  const nextSlide = useCallback(() => {
+    const totalSteps = getTotalSteps(currentSlide);
+    
+    if (currentStep < totalSteps - 1) {
+      // Переход к следующему подшагу
+      setCurrentStep(currentStep + 1);
+    } else if (currentSlide < slides.length - 1) {
+      // Переход к следующему слайду
       const newSlide = currentSlide + 1;
       setCurrentSlide(newSlide);
+      setCurrentStep(0);
       navigate(`/slide/${newSlide + 1}`);
     }
-  };
+  }, [currentSlide, currentStep, navigate]);
 
-  const prevSlide = () => {
-    if (currentSlide > 0) {
+  const prevSlide = useCallback(() => {
+    if (currentStep > 0) {
+      // Переход к предыдущему подшагу
+      setCurrentStep(currentStep - 1);
+    } else if (currentSlide > 0) {
+      // Переход к предыдущему слайду
       const newSlide = currentSlide - 1;
+      const totalSteps = getTotalSteps(newSlide);
       setCurrentSlide(newSlide);
+      setCurrentStep(totalSteps - 1);
       navigate(`/slide/${newSlide + 1}`);
     }
-  };
+  }, [currentSlide, currentStep, navigate]);
 
   useEffect(() => {
     if (slideNumber) {
       const slideNum = parseInt(slideNumber, 10) - 1;
       if (slideNum >= 0 && slideNum < slides.length) {
         setCurrentSlide(slideNum);
+        setCurrentStep(0);
       }
     }
   }, [slideNumber]);
@@ -76,6 +92,7 @@ const Presentation: React.FC = () => {
   };
 
   const CurrentSlideComponent = slides[currentSlide].component;
+  const totalSteps = getTotalSteps(currentSlide);
 
   return (
     <div className="presentation-container">
@@ -90,8 +107,22 @@ const Presentation: React.FC = () => {
         {currentSlide + 1} / {slides.length}
       </div>
 
+      {totalSteps > 1 && (
+        <div className="substep-indicator">
+          {Array.from({ length: totalSteps }, (_, index) => (
+            <div
+              key={index}
+              className={`substep-dot ${
+                index < currentStep ? 'substep-dot--completed' : 
+                index === currentStep ? 'substep-dot--active' : ''
+              }`}
+            />
+          ))}
+        </div>
+      )}
+
       <div className="slide">
-        <CurrentSlideComponent />
+        <CurrentSlideComponent currentStep={currentStep} />
       </div>
 
       <div className="navigation">
