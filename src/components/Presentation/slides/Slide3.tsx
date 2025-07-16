@@ -36,12 +36,6 @@ const Slide3: React.FC<Slide3Props> = ({ currentStep }) => {
         <p>Основное отличие - это <span className="highlight">масштаб данных</span> и <span className="highlight">сложность паттернов</span></p>
       </AnimatedElement>
       
-      <AnimatedElement step={3} currentStep={currentStep} animationType="fade" delay={300}>
-        <div className="token-example">
-          T9: "Прив" → "Привет"<br/>
-          AI: "Столица Франции" → "Париж"
-        </div>
-      </AnimatedElement>
     </>
   );
 };
