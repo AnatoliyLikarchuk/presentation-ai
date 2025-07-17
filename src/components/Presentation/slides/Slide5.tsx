@@ -10,7 +10,7 @@ const Slide5: React.FC<Slide5Props> = ({ currentStep }) => {
   return (
     <>
       <AnimatedElement step={0} currentStep={currentStep} animationType="fade">
-        <h2>AI - это не интеллект, а технология предсказания</h2>
+        <h2>AI - это не интеллект, а технология предсказания следующего токена</h2>
       </AnimatedElement>
       
       <AnimatedElement step={1} currentStep={currentStep} animationType="slideUp" delay={100}>
